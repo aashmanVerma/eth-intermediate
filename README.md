@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Charity Donation using Metamask project 
 
-## Getting Started
+I have created a simple charity donation platform using metamask, nextjs, hardhat.
 
-First, run the development server:
+Functions available in the contract - 
+1. Donate function with condition checks, if not met then we will revert the transaction
+2. Function to fetch to the total number of people who have donated till now
+3. Function to fetch the total amount in donations we have received till now
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Function available in frontend - 
+1. Connect wallet on site load
+2. Specifically connect wallet button
+3. Donate button to process transaction and refresh button to get the information related to donated amount till now
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+# Project Setup 
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+* Next js base project with tailwind css
+* Hardhat development enviroment setup
 
-## Learn More
+# Installation and Execution
 
-To learn more about Next.js, take a look at the following resources:
+After cloning the github, you will want to do the following to get the code running on your computer.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Inside the project directory, in the terminal type: npm i
+2. Open two additional terminals in your VS code
+3. In the second terminal type to run local hardhat node: npx hardhat node 
+4. In the third terminal, type to deploy your contract to local hardhat node: npx hardhat run --network localhost scripts/deploy.js
+5. Back in the first terminal, type npm run dev to launch the front-end.
+6. Add a local rpc network to the metamask web extension with the help of information given on the second terminal and chain id to be 31337
+7. Import a account in the metamask using the account private key given after starting up the local hardhat node
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+After this, the project will be running on your localhost. 
+Typically at http://localhost:3000/
 
-## Deploy on Vercel
+# Contributor 
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Aashman Verma - vermaaashman16@gmail.com
+In case of any issues of help you can connect with me through mail.
